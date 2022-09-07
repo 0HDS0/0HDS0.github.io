@@ -1,0 +1,40 @@
+body, html{
+    background-color: rgb(23, 23, 107);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.flex-container {
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+}
+
+form.Square{
+    background-color: rgb(71, 0, 129);
+    padding: 20px;
+    height: 30%;
+    min-height: 267px;
+    color: azure;
+    border-radius: 30px 0px 30px 0px;
+  box-shadow: 10px 10px 5px rgb(49, 0, 88);
+}
+#Log, #Pass{
+    width: 100%;
+    border-style: solid;
+    border-color: rgb(255, 0, 34);
+    border-radius: 5PX;
+}
+#But{
+    width: 103%;
+    border-style: hidden;
+    transition-duration: 0.5s;
+    border-radius: 2px;
+}
+#But:hover{
+    background-color: rgb(105, 201, 224);
+    color: black;
+}
