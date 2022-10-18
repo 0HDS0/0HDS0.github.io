@@ -1,6 +1,22 @@
 <p>data-binding works!</p>
+
+<h2>Interpolation</h2>
 {{nome}} - {{idade}}
+<hr>
+
+<h2>Propety</h2>
+<button [disabled]="isDisabled">Botão</button>
 <br>
-<button [disabled]="isDisable"></button>
-<Br>
-  <input [type]= "InputType">
+<input [type]="InputType">
+<hr>
+
+<h2>Event</h2>
+<button (click)="eventoDoBotao()">Botão com Evento</button>
+<br>
+<input [disabled]="InputDisabled">
+<hr>
+
+<h2>Two-Way</h2>
+<input [(ngModel)]="nomeTwoWay" type="text">
+<br>
+{{nomeTwoWay}}

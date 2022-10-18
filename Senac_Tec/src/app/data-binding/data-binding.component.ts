@@ -9,12 +9,16 @@ export class DataBindingComponent implements OnInit {
 
   nome:String ="Henrique";
   idade:Number = 20;
-  isDisable: Boolean = true;
+  isDisabled: Boolean = true;
   InputType: String = "Date";
+  InputDisabled: Boolean = false;
+  nomeTwoWay:String ="Henrique";
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  eventoDoBotao(){
+    this.InputDisabled = !this.InputDisabled;
+  }
 }
