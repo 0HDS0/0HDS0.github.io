@@ -1,0 +1,6 @@
+<h2>Componente pai</h2>
+<input [(ngModel)]="nomePai"><br>
+{{nomePai}}
+<br>
+{{contPai}}
+<app-componente-filho (event)="RecebeCont($event)" [nomeFilho]="nomePai"></app-componente-filho>

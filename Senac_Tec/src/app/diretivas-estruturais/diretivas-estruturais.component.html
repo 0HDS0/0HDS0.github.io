@@ -1,0 +1,36 @@
+<ng-content select="h1"></ng-content>
+{{data | date: 'dd/MM/YYYY HH:mm:ss'}}
+<hr>
+
+<button (click)="exibirRemover()">Exibr/Excluir</button>
+<h2 *ngIf="visivel, else TemplateFs">NgIf True</h2>
+<ng-template #TemplateFs>
+<h2>NgIf False</h2>
+<h3>isso é um template</h3>
+</ng-template>
+<hr>
+
+<h2>NgFor</h2>
+<div *ngFor="let nome of listaNome; let i = index">{{i}} - {{nome | uppercase}}</div>
+<br>
+<ng-template ngFor let-nome [ngForOf]="listaNome">
+ <p>{{nome}}</p>
+</ng-template>
+<hr>
+
+<h2>NgSwitch</h2>
+<input [(ngModel)]="nome">
+<div [ngSwitch]="nome">
+  <p *ngSwitchCase="'Henrique'">
+    Meu nome
+  </p>
+  <p *ngSwitchCase="'Dias dos Santos'">
+    Meu sobrenome
+  </p>
+  <p *ngSwitchCase="'Henrique Dias dos Santos'">
+    Meu nome e sobrenome
+  </p>
+  <p *ngSwitchDefault>
+    Esse não é meu nome
+  </p>
+</div>
